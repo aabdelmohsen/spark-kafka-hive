@@ -15,6 +15,7 @@ import org.apache.spark.streaming.kafka._
 import kafka.serializer.StringDecoder
 import java.text.SimpleDateFormat
 import java.util.Date
+import scala.util.control.Exception.Catch
 
 object WebLogStreaming {
 
@@ -60,13 +61,14 @@ object WebLogStreaming {
 
   def saveLogToHive(sc: SparkContext, ip: String, datetime: String, reqType: String, page: String, status: String) {
 
-    println("Start Saving Log Record ..........")
+    println("============== Start Saving Log Record  ================")
     val hiveContext = new HiveContext(sc)
     hiveContext.sql("CREATE TABLE IF NOT EXISTS WEBLOGS (ip STRING, datetime STRING, type STRING, page STRING, status STRING)")
     var sql: String = "select '" + ip + "' as ip, '" + datetime + "' as datetime, '" + reqType + "' as type, '" + page + "' as page, '" + status + "' as status"
     val data = hiveContext.sql(sql)
     data.write.mode("append").saveAsTable("WEBLOGS")
-    println("Saved Succssfully .................")
+    println("============== Record Saved Successfully =================")
+    
   }
 
 }
