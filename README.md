@@ -1,5 +1,5 @@
 # Spark Streaming integration with Kafka and Hive
-This project helps you to understand how to create Spark Direct Stream to stream log data messages 
+This project helps you to understand how to create Spark Direct Stream to read web requests log data messages 
 from Apache Kafka and save the messages as records inside Hive table  
 
 ## About the data
