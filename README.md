@@ -2,12 +2,6 @@
 This project created by using Apache Spark Direct Stream to read web requests logs data as messages 
 from Apache Kafka and store them inside Apache Hive table  
 
-## About the data
-
-This dataset has 16008 rows and 4 columns. Columns are IP, Time, URL, Response Status for each web request
-and you can find the data on Kaggle web site using this URL 
-
-* https://www.kaggle.com/shawon10/web-log-dataset
  
 ## Sample of the data
 
@@ -21,3 +15,12 @@ and you can find the data on Kaggle web site using this URL
 
 10.130.2.1,22/Nov/2017:23:21:04,POST /process.php HTTP/1.1,302
 
+## Project goals
+
+This goal is to read the streaming logs of web requests from Kafka and store them inside apache hive table and the 
+Columns are IP, DateTime, RequestType, Page , ResponseStatus generated from for each web request log .
+
+
+Also you can find the data on Kaggle web site using the below URL 
+
+* https://www.kaggle.com/shawon10/web-log-dataset
