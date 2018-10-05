@@ -1,4 +1,5 @@
 # Spark Streaming integration with Kafka and Hive
+
 This project created by using Apache Spark Direct Stream to read web requests logs data as messages 
 from Apache Kafka and store them inside Apache Hive table  
 
@@ -15,12 +16,6 @@ from Apache Kafka and store them inside Apache Hive table
 
 10.130.2.1,22/Nov/2017:23:21:04,POST /process.php HTTP/1.1,302
 
-## Project goals
-
-This goal is to read the streaming logs of web requests from Kafka and store them inside apache hive table and the 
-Columns are IP, DateTime, RequestType, Page , ResponseStatus generated from for each web request log .
-
-
-Also you can find the data on Kaggle web site using the below URL 
+### Data source
 
 * https://www.kaggle.com/shawon10/web-log-dataset
